@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: SUITE-Regular;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(145deg, #ffffff, #bdc3c7);
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 300px;
+  padding: 30px;
+  gap: 15px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2),
+    -10px -10px 20px rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.display {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 3rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.buttons {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  justify-content: space-between;
+}
+
+.buttons button {
+  width: 30%;
+  height: 100%;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: none;
+  color: #555;
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1),
+    -5px -5px 10px rgba(255, 255, 255, 0.1);
+  transition: 0.3s, transform 0.3s;
+}
+
+.buttons button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0.95);
+}
+.buttons button:active {
+  transform: scale(0.9);
+}
+.buttons button.push {
+  box-shadow: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 80px;
+  font-size: 3.5rem;
+  text-align: center;
+  background: none;
+}
+
+#circle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  border-radius: 100%;
+  transition: opacity 0.3s;
+}
+#circle.start {
+  background: orange;
+  opacity: 1;
+  animation: blink 1s infinite;
+}
+#circle.stop {
+  background: tomato;
+  opacity: 1;
+}
+#circle.reset {
+  background: #999;
+  opacity: 0;
+  animation: disappear 1s;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@import url("https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css");
