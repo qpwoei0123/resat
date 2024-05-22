@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="userForm">
+        <input id="todo" type="text" placeholder="오늘 할 일" />
+        <div class="levels">
+          중요한 일인가요?
+          <button class="level1">
+            <span>별로</span>
+            <img
+              src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Diagonal%20Mouth.png"
+              alt="Face with Diagonal Mouth"
+              width="25"
+            />
+          </button>
+          <button class="level2">
+            <span>보통</span>
+            <img
+              src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Slightly%20Smiling%20Face.png"
+              alt="Slightly Smiling Face"
+              width="25"
+              height="25"
+            />
+          </button>
+          <button class="level3">
+            <span>중요</span>
+            <img
+              src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png"
+              alt="Star"
+              width="25"
+              height="25"
+            />
+          </button>
+          <button class="level4">
+            <span>급해!</span>
+            <img
+              src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png"
+              alt="Fire"
+              width="25"
+              height="25"
+            />
+          </button>
+        </div>
+        <button id="addBtn">등록하기</button>
+      </div>
+    </section>
+
+    <div class="relativeWrap">
+      <div class="filters">
+        <button>전체</button>
+        <button>완료</button>
+        <button>미완료</button>
+      </div>
+      <div class="sort">
+        <button>오름차순</button>
+        <button>내림차순</button>
+      </div>
+      <section class="todoListWrap">
+        <div class="todolist">
+          <h2>투-두 리스트</h2>
+          <ul id="todoUl"></ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
