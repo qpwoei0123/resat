@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESAT Calendar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="calendar">
+      <div id="memo-container" class="">
+        <h2 id="memo-title"></h2>
+        <span id="memo-contents"></span>
+        <input type="text" id="memo-input" placeholder="메모가 없습니다." />
+        <button id="edit-btn">SAVE</button>
+      </div>
+      <div id="month">
+        <button id="prev">&lt;</button>
+        <h2 id="month-year"></h2>
+        <button id="next">&gt;</button>
+      </div>
+      <table id="calendar-table">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody id="calendar-body"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
