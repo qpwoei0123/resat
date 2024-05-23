@@ -1,0 +1,150 @@
+/* styles.css */
+
+@font-face {
+  font-family: "SUITE-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: SUITE-Regular, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(145deg, #ffffff, #bdc3c7);
+}
+
+#calendar {
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  min-height: 300px;
+  transform: translateX(-20%);
+}
+
+#month {
+  display: flex;
+  align-items: center;
+  background: #555;
+  color: white;
+  padding: 10px;
+}
+
+#month button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#month h2 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+#calendar-table {
+  border-collapse: collapse;
+}
+
+#calendar-table th,
+#calendar-table td {
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+#calendar-table th {
+  background: #f4f4f4;
+}
+
+#calendar-table td {
+  cursor: pointer;
+}
+
+#calendar-table td.empty {
+  background: #f4f4f4;
+  cursor: default;
+}
+#calendar-body .memo {
+  cursor: default;
+  position: relative;
+}
+#calendar-body .memo::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: tomato;
+  border-radius: 100%;
+  position: absolute;
+  margin: 5px;
+  top: 0%;
+  right: 0%;
+}
+
+#memo-container {
+  position: absolute;
+  left: 101%;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  opacity: 0;
+  transition: all 0.1s;
+}
+#memo-container.show {
+  opacity: 1;
+}
+
+#memo-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+#memo-contents {
+  display: block;
+  margin-bottom: 10px;
+  min-height: 50px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fafafa;
+  color: #555;
+  white-space: pre-wrap;
+}
+
+#memo-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+#edit-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#edit-btn:hover {
+  background-color: #777;
+}
