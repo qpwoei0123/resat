@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 0.9rem;
+  padding: 20px 16px;
+  position: relative;
+}
+a.primary {
+  color: rgb(23, 161, 255);
+}
+a.beta::after {
+  top: 20%;
+  right: 10%;
+  font-size: 0.5rem;
+  position: absolute;
+  content: "Beta ";
+  color: rgb(23, 161, 255);
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  height: 60px;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  .logo {
+    height: 80%;
+    padding: 0 16px 0 13px;
+    margin-left: 20px;
+    img {
+      height: 100%;
+    }
+  }
+
+  nav.user {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+  }
+}
+
+section {
+  margin: 40px 0;
+  width: 936px;
+}
