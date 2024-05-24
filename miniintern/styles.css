@@ -8,6 +8,10 @@ body {
 li {
   list-style-type: none;
 }
+li:hover {
+  box-shadow: rgba(26, 27, 28, 0.12) 0px 4px 8px 0px;
+  transform: translateY(-5px);
+}
 ul {
   padding: 0;
 }
