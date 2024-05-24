@@ -8,12 +8,18 @@ body {
 li {
   list-style-type: none;
 }
+ul {
+  padding: 0;
+}
 a {
   text-decoration: none;
   color: #aaa;
   font-size: 0.9rem;
   padding: 20px 16px;
   position: relative;
+}
+p {
+  margin: 0;
 }
 a.primary {
   color: rgb(23, 161, 255);
@@ -103,17 +109,9 @@ section {
     }
   }
 
-  .section-two {
+  .section-title-box {
     h2 {
       margin: 0;
-    }
-    h2:after {
-      content: "";
-      display: block;
-      width: 85px;
-      height: 2px;
-      background-color: rgb(23, 161, 255);
-      margin: 1px 0;
     }
     h4 {
       width: 100%;
@@ -126,6 +124,18 @@ section {
         color: rgb(23, 161, 255);
       }
     }
+  }
+
+  .section-two {
+    h2:after {
+      content: "";
+      display: block;
+      width: 85px;
+      height: 2px;
+      background-color: rgb(23, 161, 255);
+      margin: 1px 0;
+    }
+
     ul {
       width: 100%;
       display: grid;
@@ -205,6 +215,7 @@ section {
       p.title {
         text-align: end;
         width: 60px;
+        margin-top: 10px;
         padding: 10px 25px;
         border-radius: 0px 17px 17px 0px;
         background: rgb(23, 161, 255);
@@ -216,10 +227,78 @@ section {
       .sub-text {
         margin: 0;
         margin-left: 30px;
+        padding: 10px 0;
       }
       .main-text {
         margin: 0;
         margin-left: 30px;
+      }
+    }
+  }
+  .section-four {
+    ul.recruitment-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+
+      li {
+        box-shadow: rgba(26, 27, 28, 0.12) 0px 4px 8px 0px;
+        opacity: 1;
+        transition: transform 0.4s ease 0s, box-shadow 0.4s ease 0s;
+        border-radius: 5px;
+        cursor: pointer;
+        list-style: none;
+        a {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          .img-box {
+            width: 120px;
+            height: 120px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 5px 0px 0px 5px;
+            }
+          }
+          .info-box {
+            .category {
+              color: rgb(147, 153, 153);
+              font-size: 12px;
+              margin-bottom: 4px;
+            }
+            .title {
+              color: rgb(26, 27, 28);
+              word-break: break-all;
+              font-size: 14px;
+              font-weight: bold;
+              margin-bottom: 4px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: initial;
+              display: -webkit-box;
+              -webkit-line-clamp: 1;
+              -webkit-box-orient: vertical;
+            }
+            .company {
+              color: rgb(26, 27, 28);
+              font-size: 12px;
+              font-weight: bold;
+              margin-bottom: 13px;
+            }
+            .type {
+              width: fit-content;
+              border-radius: 5px;
+              background-color: rgb(241, 249, 255);
+              color: rgb(23, 161, 255);
+              padding: 0px 4px;
+              margin-right: 4px;
+              font-size: 12px;
+            }
+          }
+        }
       }
     }
   }
