@@ -541,3 +541,55 @@ section {
     }
   }
 }
+
+footer {
+  border-top: 1px solid #ddd;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #footer-inner {
+    width: 930px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    #footer-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #footer-cs {
+      border-bottom: 1px solid #ddd;
+      ul li {
+        span:first-child {
+          font-size: 0.9rem;
+          margin-right: 20px;
+        }
+        span {
+          font-size: 0.8rem;
+        }
+        a {
+          font-size: 0.8rem;
+          color: #111;
+          font-weight: bold;
+        }
+      }
+    }
+    #footer-info {
+      display: flex;
+      justify-content: space-between;
+      p {
+        font-size: 12px;
+        line-height: 18px;
+        color: rgb(171, 177, 177);
+        word-break: keep-all;
+      }
+      .mark {
+        flex-shrink: 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgb(171, 177, 177);
+      }
+    }
+  }
+}
