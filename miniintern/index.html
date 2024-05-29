@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>miniintern</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
   </head>
@@ -208,8 +208,30 @@
         </ul>
       </section>
       <section class="section-three">
-        <div class="slider">
-          <img src="asset/img/slider.png" alt="" />
+        <div class="slider__wrapper">
+          <div class="slider-control">
+            <button class="control__button prev"><</button>
+            <button class="control__button next">></button>
+          </div>
+          <div class="slider">
+            <div class="slide" data-index="1">
+              <img src="asset/img/Rectangle.jpg" alt="" />
+              <span>디스플레이 광고 DA<br/>이해하기</span>
+            </div>
+            <div class="slide" data-index="2">
+              <img src="asset/img/Rectangle.jpg" alt="" />
+              <span>CRM 마케팅<br/>이해하기</span>
+            </div>
+            <div class="slide" data-index="3">
+              <img src="asset/img/Rectangle.jpg" alt="" />
+              <span>검색 광고 CA<br/>이해하기</span>
+            </div>
+            <div class="slide" data-index="4">
+              <img src="asset/img/Rectangle.jpg" alt="" />
+              <span>구글 스프레드시트로<br/>마케팅 데이터 분석하기</span>
+            </div>
+            
+          </div>
         </div>
         <div class="info-box">
           <p class="title">서비스 런칭</p>
