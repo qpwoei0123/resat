@@ -1,0 +1,142 @@
+@import url(https://db.onlinewebfonts.com/c/565a681be0eb6f1d92c6bc57c629ea35?family=Flame+Bold);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Flame Bold", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background: #d62700;
+  padding: 0 50px;
+  color: #f5ebdc;
+  position: relative;
+  z-index: 999;
+  .logo {
+    font-size: 1.5rem;
+    position: relative;
+    background: linear-gradient(180deg, #ff6347, #ffa500, #ffecb3);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.slide-nav {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding-top: 60px;
+  min-width: 200px;
+  background: #ff8733;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+  li {
+    padding: 20px;
+    list-style: none;
+    a {
+      color: #f5ebdc;
+      text-decoration: none;
+      font-size: 2rem;
+    }
+  }
+}
+.slide-nav.toggle {
+  transform: translateX(0%);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #f5ebdc;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 21px;
+  .line1 {
+    background: #ff8733;
+  }
+  .line2 {
+    background: #6ba539;
+  }
+  .line3 {
+    background: #ffd700;
+  }
+  .line4 {
+    background: #7b3f00;
+  }
+  .line5 {
+    background: #ff8733;
+  }
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: #f5ebdc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.burger.toggle {
+  .line1 {
+    transform: rotate(13deg) translate(2px, -3px);
+  }
+  .line2 {
+    transform: rotate(10deg) translate(2px, -1px);
+  }
+  .line3 {
+    transform: rotate(5deg) translateX(-2px);
+  }
+  .line4 {
+    transform: rotate(1deg) translateX(-2px, 1px);
+  }
+  .line5 {
+    transform: rotate(-2deg) translate(0px, 2px);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+  }
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+  .burger {
+    display: flex;
+  }
+  .slide-nav {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0);
+}
